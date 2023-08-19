@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+    <test name="login test">
+        <classes>
+            <class name="com.avenuee.tests.LogInTest"/>
+            <class name="com.avenuee.tests.CartBrandTest"></class>
+            <class name="com.avenuee.tests.ContactUsTest"></class>
+            <class name="com.avenuee.tests.LogInTest"></class>
+            <class name="com.avenuee.tests.RegisterCheckoutTest"></class>
+            <class name="com.avenuee.tests.RegisterUserTest"></class>
+            <class name="com.avenuee.tests.RemoveProductFromCartTest"></class>
+            <class name="com.avenuee.tests.SearchProductTest"></class>
+            <class name="com.avenuee.tests.VerifyProductQuantityTest"></class>
+            <class name="com.avenuee.tests.VerifySubscriptionTest"></class>
+            <class name="com.avenuee.tests.VerifyTestCasesTest"></class>
+
+
+
+
+
+
+
+
+
+        </classes>
+    </test>
+
+</suite>

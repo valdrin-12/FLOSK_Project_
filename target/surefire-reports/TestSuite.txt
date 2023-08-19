@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 96.821 s <<< FAILURE! - in TestSuite
+com.avenuee.tests.CartBrandTest.clickBrand  Time elapsed: 7.463 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <li>...</li> is not clickable at point (281, 695). Other element would receive the click: <iframe id="aswift_2" name="aswift_2" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20230816/r20110914/zrt_lookup.html?fsb=1#RS-3-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=3&amp;uci=a!3&amp;btvi=1&amp;xpc=Ay1k6qSrqG&amp;p=https%3A//www.automationexercise.com" data-google-container-id="a!3" data-google-query-id="CKy009-u6IADFQZVGQodS54IrA" data-load-complete="true"></iframe>
+  (Session info: chrome=116.0.5845.96)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.5.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=6864FACEE9D9A103265F5C257E0A1628_element_78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -> xpath: //*[@class='brands-name']/ul/li]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at com.avenuee.tests.CartBrandTest.clickBrand(CartBrandTest.java:34)
+
+com.avenuee.tests.ContactUsTest.contactUsTest  Time elapsed: 6.721 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <input type="submit" data-qa="submit-button" name="submit" class="btn btn-primary pull-left submit_form" value="Submit"> is not clickable at point (198, 653). Other element would receive the click: <div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;">...</div>
+  (Session info: chrome=116.0.5845.96)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.5.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=D84085DC3EB6A0FB0DE68C76B07DE849_element_110}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -> xpath: //input[@type='submit' and @data-qa='submit-button']]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at com.avenuee.tests.ContactUsTest.contactUsTest(ContactUsTest.java:33)
+
+com.avenuee.tests.RegisterCheckoutTest.registerCheckoutTest  Time elapsed: 1.843 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <a data-product-id="1" class="btn btn-default add-to-cart">...</a> is not clickable at point (586, 625). Other element would receive the click: <iframe id="aswift_6" name="aswift_6" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20230816/r20110914/zrt_lookup.html?fsb=1#RS-3-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=7&amp;uci=a!7&amp;btvi=3&amp;xpc=jl6kNRHBUp&amp;p=https%3A//www.automationexercise.com" data-google-container-id="a!7" data-google-query-id="CKWOlOmu6IADFcOKgwcddi4DLQ" data-load-complete="true"></iframe>
+  (Session info: chrome=116.0.5845.96)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.5.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=7E86A9546FCAA9D9EFD1775E92FA1A19_element_133}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -> xpath: (//a[@data-product-id='1' and contains(@class, 'btn btn-default add-to-cart')])[2]]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at com.avenuee.tests.RegisterCheckoutTest.registerCheckoutTest(RegisterCheckoutTest.java:31)
+
+com.avenuee.tests.RegisterUserTest.CreateAccount  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: expected [Automation Exercise] but found [Automation Exercise - Signup / Login]
+	at com.avenuee.tests.RegisterUserTest.CreateAccount(RegisterUserTest.java:37)
+
+com.avenuee.tests.RegisterUserTest.CreateAccountTest  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: expected [Automation Exercise] but found [Automation Exercise - Signup / Login]
+	at com.avenuee.tests.RegisterUserTest.CreateAccountTest(RegisterUserTest.java:26)
+
+com.avenuee.tests.VerifyProductQuantityTest.verifyQuantity  Time elapsed: 21.022 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -> xpath: //button[@class='btn btn-success close-modal btn-block']] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.5.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at com.avenuee.tests.VerifyProductQuantityTest.verifyQuantity(VerifyProductQuantityTest.java:32)
+

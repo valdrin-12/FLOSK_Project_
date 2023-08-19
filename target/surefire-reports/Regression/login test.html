@@ -1,0 +1,525 @@
+<html>
+<head>
+<title>TestNG:  login test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>login test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Aug 19 11:03:34 CEST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>89 seconds (89093 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.avenuee.tests.RegisterUserTest.CreateAccount()'><b>CreateAccount</b><br>Test class: com.avenuee.tests.RegisterUserTest</td>
+<td><div><pre>java.lang.AssertionError: expected [Automation Exercise] but found [Automation Exercise - Signup / Login]
+	at com.avenuee.utilities.BrowserUtils.pageVerification(BrowserUtils.java:14)
+	at com.avenuee.tests.RegisterUserTest.CreateAccount(RegisterUserTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace678654833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace678654833'><pre>java.lang.AssertionError: expected [Automation Exercise] but found [Automation Exercise - Signup / Login]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.avenuee.utilities.BrowserUtils.pageVerification(BrowserUtils.java:14)
+	at com.avenuee.tests.RegisterUserTest.CreateAccount(RegisterUserTest.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+</pre></div></td>
+<td>0</td>
+<td>com.avenuee.tests.RegisterUserTest@26a2f7f9</td></tr>
+<tr>
+<td title='com.avenuee.tests.RegisterCheckoutTest.registerCheckoutTest()'><b>registerCheckoutTest</b><br>Test class: com.avenuee.tests.RegisterCheckoutTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-product-id=&quot;1&quot; class=&quot;btn btn-default add-to-cart&quot;&gt;...&lt;/a&gt; is not clickable at point (586, 625). Other element would receive the click: &lt;iframe id=&quot;aswift_6&quot; name=&quot;aswift_6&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230816/r20110914/zrt_lookup.html?fsb=1#RS-3-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=7&amp;amp;uci=a!7&amp;amp;btvi=3&amp;amp;xpc=jl6kNRHBUp&amp;amp;p=https%3A//www.automationexercise.com&quot; data-google-container-id=&quot;a!7&quot; data-google-query-id=&quot;CKWOlOmu6IADFcOKgwcddi4DLQ&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=116.0.5845.96)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=7E86A9546FCAA9D9EFD1775E92FA1A19_element_133}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: (//a[@data-product-id=&apos;1&apos; and contains(@class, &apos;btn btn-default add-to-cart&apos;)])[2]]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.avenuee.pages.SearchProductPage.registerWhileCheckout(SearchProductPage.java:191)
+	at com.avenuee.tests.RegisterCheckoutTest.registerCheckoutTest(RegisterCheckoutTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1681434622", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1681434622'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-product-id=&quot;1&quot; class=&quot;btn btn-default add-to-cart&quot;&gt;...&lt;/a&gt; is not clickable at point (586, 625). Other element would receive the click: &lt;iframe id=&quot;aswift_6&quot; name=&quot;aswift_6&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230816/r20110914/zrt_lookup.html?fsb=1#RS-3-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=7&amp;amp;uci=a!7&amp;amp;btvi=3&amp;amp;xpc=jl6kNRHBUp&amp;amp;p=https%3A//www.automationexercise.com&quot; data-google-container-id=&quot;a!7&quot; data-google-query-id=&quot;CKWOlOmu6IADFcOKgwcddi4DLQ&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=116.0.5845.96)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=7E86A9546FCAA9D9EFD1775E92FA1A19_element_133}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: (//a[@data-product-id=&apos;1&apos; and contains(@class, &apos;btn btn-default add-to-cart&apos;)])[2]]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.avenuee.pages.SearchProductPage.registerWhileCheckout(SearchProductPage.java:191)
+	at com.avenuee.tests.RegisterCheckoutTest.registerCheckoutTest(RegisterCheckoutTest.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+</pre></div></td>
+<td>1</td>
+<td>com.avenuee.tests.RegisterCheckoutTest@1f51431</td></tr>
+<tr>
+<td title='com.avenuee.tests.VerifyProductQuantityTest.verifyQuantity()'><b>verifyQuantity</b><br>Test class: com.avenuee.tests.VerifyProductQuantityTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: //button[@class=&apos;btn btn-success close-modal btn-block&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.avenuee.utilities.WaitUtils.waitForElementToBeVisible(WaitUtils.java:17)
+	at com.avenuee.pages.SearchProductPage.clickOnAddCart(SearchProductPage.java:161)
+	at com.avenuee.tests.VerifyProductQuantityTest.verifyQuantity(VerifyProductQuantityTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1073041213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1073041213'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: //button[@class=&apos;btn btn-success close-modal btn-block&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.avenuee.utilities.WaitUtils.waitForElementToBeVisible(WaitUtils.java:17)
+	at com.avenuee.pages.SearchProductPage.clickOnAddCart(SearchProductPage.java:161)
+	at com.avenuee.tests.VerifyProductQuantityTest.verifyQuantity(VerifyProductQuantityTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+</pre></div></td>
+<td>21</td>
+<td>com.avenuee.tests.VerifyProductQuantityTest@21422231</td></tr>
+<tr>
+<td title='com.avenuee.tests.CartBrandTest.clickBrand()'><b>clickBrand</b><br>Test class: com.avenuee.tests.CartBrandTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li&gt;...&lt;/li&gt; is not clickable at point (281, 695). Other element would receive the click: &lt;iframe id=&quot;aswift_2&quot; name=&quot;aswift_2&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230816/r20110914/zrt_lookup.html?fsb=1#RS-3-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=3&amp;amp;uci=a!3&amp;amp;btvi=1&amp;amp;xpc=Ay1k6qSrqG&amp;amp;p=https%3A//www.automationexercise.com&quot; data-google-container-id=&quot;a!3&quot; data-google-query-id=&quot;CKy009-u6IADFQZVGQodS54IrA&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=116.0.5845.96)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=6864FACEE9D9A103265F5C257E0A1628_element_78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: //*[@class=&apos;brands-name&apos;]/ul/li]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at com.avenuee.pages.CartBrandPage.clickOnBrand(CartBrandPage.java:40)
+	at com.avenuee.tests.CartBrandTest.clickBrand(CartBrandTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2016146960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2016146960'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li&gt;...&lt;/li&gt; is not clickable at point (281, 695). Other element would receive the click: &lt;iframe id=&quot;aswift_2&quot; name=&quot;aswift_2&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230816/r20110914/zrt_lookup.html?fsb=1#RS-3-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=3&amp;amp;uci=a!3&amp;amp;btvi=1&amp;amp;xpc=Ay1k6qSrqG&amp;amp;p=https%3A//www.automationexercise.com&quot; data-google-container-id=&quot;a!3&quot; data-google-query-id=&quot;CKy009-u6IADFQZVGQodS54IrA&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=116.0.5845.96)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=6864FACEE9D9A103265F5C257E0A1628_element_78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: //*[@class=&apos;brands-name&apos;]/ul/li]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at com.avenuee.pages.CartBrandPage.clickOnBrand(CartBrandPage.java:40)
+	at com.avenuee.tests.CartBrandTest.clickBrand(CartBrandTest.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+</pre></div></td>
+<td>7</td>
+<td>com.avenuee.tests.CartBrandTest@f2ce6b</td></tr>
+<tr>
+<td title='com.avenuee.tests.ContactUsTest.contactUsTest()'><b>contactUsTest</b><br>Test class: com.avenuee.tests.ContactUsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;submit&quot; data-qa=&quot;submit-button&quot; name=&quot;submit&quot; class=&quot;btn btn-primary pull-left submit_form&quot; value=&quot;Submit&quot;&gt; is not clickable at point (198, 653). Other element would receive the click: &lt;div id=&quot;aswift_2_host&quot; tabindex=&quot;0&quot; title=&quot;Advertisement&quot; aria-label=&quot;Advertisement&quot; style=&quot;border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=116.0.5845.96)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=D84085DC3EB6A0FB0DE68C76B07DE849_element_110}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: //input[@type=&apos;submit&apos; and @data-qa=&apos;submit-button&apos;]]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.avenuee.pages.ContactUsPage.clickOnSubmitBtn(ContactUsPage.java:61)
+	at com.avenuee.pages.ContactUsPage.contactUs(ContactUsPage.java:53)
+	at com.avenuee.tests.ContactUsTest.contactUsTest(ContactUsTest.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace250702170", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace250702170'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;submit&quot; data-qa=&quot;submit-button&quot; name=&quot;submit&quot; class=&quot;btn btn-primary pull-left submit_form&quot; value=&quot;Submit&quot;&gt; is not clickable at point (198, 653). Other element would receive the click: &lt;div id=&quot;aswift_2_host&quot; tabindex=&quot;0&quot; title=&quot;Advertisement&quot; aria-label=&quot;Advertisement&quot; style=&quot;border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=116.0.5845.96)
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0edb30b33eb388749aac9988ce40a7ff, clickElement {id=D84085DC3EB6A0FB0DE68C76B07DE849_element_110}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/ch/6fz8g5ss7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59351/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (0edb30b33eb388749aac9988ce40a7ff)] -&gt; xpath: //input[@type=&apos;submit&apos; and @data-qa=&apos;submit-button&apos;]]
+Session ID: 0edb30b33eb388749aac9988ce40a7ff
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.avenuee.pages.ContactUsPage.clickOnSubmitBtn(ContactUsPage.java:61)
+	at com.avenuee.pages.ContactUsPage.contactUs(ContactUsPage.java:53)
+	at com.avenuee.tests.ContactUsTest.contactUsTest(ContactUsTest.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+</pre></div></td>
+<td>6</td>
+<td>com.avenuee.tests.ContactUsTest@dc7b462</td></tr>
+<tr>
+<td title='com.avenuee.tests.RegisterUserTest.CreateAccountTest()'><b>CreateAccountTest</b><br>Test class: com.avenuee.tests.RegisterUserTest</td>
+<td><div><pre>java.lang.AssertionError: expected [Automation Exercise] but found [Automation Exercise - Signup / Login]
+	at com.avenuee.utilities.BrowserUtils.pageVerification(BrowserUtils.java:14)
+	at com.avenuee.tests.RegisterUserTest.CreateAccountTest(RegisterUserTest.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1134601005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1134601005'><pre>java.lang.AssertionError: expected [Automation Exercise] but found [Automation Exercise - Signup / Login]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.avenuee.utilities.BrowserUtils.pageVerification(BrowserUtils.java:14)
+	at com.avenuee.tests.RegisterUserTest.CreateAccountTest(RegisterUserTest.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+</pre></div></td>
+<td>0</td>
+<td>com.avenuee.tests.RegisterUserTest@26a2f7f9</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.avenuee.tests.RemoveProductFromCartTest.removeProductFromCart()'><b>removeProductFromCart</b><br>Test class: com.avenuee.tests.RemoveProductFromCartTest</td>
+<td></td>
+<td>7</td>
+<td>com.avenuee.tests.RemoveProductFromCartTest@38eb2c50</td></tr>
+<tr>
+<td title='com.avenuee.tests.VerifySubscriptionTest.VerifySubscription()'><b>VerifySubscription</b><br>Test class: com.avenuee.tests.VerifySubscriptionTest</td>
+<td></td>
+<td>0</td>
+<td>com.avenuee.tests.VerifySubscriptionTest@7186333e</td></tr>
+<tr>
+<td title='com.avenuee.tests.LogInTest.logInTest()'><b>logInTest</b><br>Test class: com.avenuee.tests.LogInTest</td>
+<td></td>
+<td>4</td>
+<td>com.avenuee.tests.LogInTest@2125ad3</td></tr>
+<tr>
+<td title='com.avenuee.tests.SearchProductTest.searchProduct()'><b>searchProduct</b><br>Test class: com.avenuee.tests.SearchProductTest</td>
+<td></td>
+<td>1</td>
+<td>com.avenuee.tests.SearchProductTest@8bffb8b</td></tr>
+<tr>
+<td title='com.avenuee.tests.VerifyTestCasesTest.VerifyTestCase()'><b>VerifyTestCase</b><br>Test class: com.avenuee.tests.VerifyTestCasesTest</td>
+<td></td>
+<td>0</td>
+<td>com.avenuee.tests.VerifyTestCasesTest@692fd26</td></tr>
+</table><p>
+</body>
+</html>
