@@ -30,13 +30,10 @@ public abstract class BaseClass {
     public void setUp(){
         driver  = Driver.getDriver();
     }
-
     @AfterSuite
     public void tearDown(){
         Driver.closeDriver();
     }
-
-
     @AfterMethod
     public void takeScreenshot(ITestResult result){
         if (ITestResult.FAILURE == result.getStatus()){

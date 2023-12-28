@@ -19,28 +19,13 @@ public class SearchProductTest extends BaseClass {
     public void setUpMethod(){
         driver.get(ConfigurationReader.getProperty("automation.baseurl") +
                 "/products");
-
-
     }
-
     @Test
     public void searchProduct() throws InterruptedException {
 
         BrowserUtils.pageVerification("Automation Exercise - All Products", driver.getTitle());
-
-
         searchProductPage.searchProduct();
         Thread.sleep(1000);
         Assert.assertTrue(searchProductPage.isProductDisplayed());
-
-
-
-
-
-
-
-
     }
-
-
 }

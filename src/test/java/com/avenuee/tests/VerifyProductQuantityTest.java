@@ -19,10 +19,7 @@ public class VerifyProductQuantityTest extends BaseClass {
     public void setUpMethod(){
         driver.get(ConfigurationReader.getProperty("automation.baseurl") +
                 "/products");
-
-
     }
-
     @Test
     public void verifyQuantity() throws InterruptedException {
 
@@ -30,16 +27,12 @@ public class VerifyProductQuantityTest extends BaseClass {
 
         int timesToAddToCart = 2;
         searchProductPage.clickOnAddCart(timesToAddToCart);
-
-       // searchProductPage.clickOnAddCart();
-
+        // searchProductPage.clickOnAddCart();
         Thread.sleep(4000);
        // Thread.sleep(4000);
-
         // Verify that the cart quantity is as expected
         boolean isQuantityDisplayed = searchProductPage.isCartQuantityVisibleAndEqualToExpected(2);
         Assert.assertTrue(isQuantityDisplayed, "Cart quantity is not displayed as expected.");
-
         System.out.println("Quantity is as we expected");
        // Assert.assertTrue(searchProductPage.isQuantityTwoDisplayed());
 

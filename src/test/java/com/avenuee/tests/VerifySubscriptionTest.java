@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class VerifySubscriptionTest extends BaseClass {
-
     DashBoardPage dashBoardPage=new DashBoardPage();
     RegisterUserPage registerUserPage =new RegisterUserPage();
     TestCasesPage testCasesPage=new TestCasesPage();
@@ -19,16 +18,11 @@ public class VerifySubscriptionTest extends BaseClass {
     public void setUpMethod(){
         // dashBoardPage.clickOnTestCaseBtn();
         driver.get(ConfigurationReader.getProperty("automation.baseurl"));
-
-
     }
     @Test
     public void VerifySubscription() throws InterruptedException {
-
         BrowserUtils.pageVerification("Automation Exercise", driver.getTitle());
         dashBoardPage.subscriptionFieldM();
-
         Assert.assertTrue(dashBoardPage.isSuccessfulTextPresent());
-
     }
 }
